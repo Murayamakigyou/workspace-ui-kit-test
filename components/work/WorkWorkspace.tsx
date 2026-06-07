@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
   Sidebar,
   SidebarContent,
@@ -45,6 +46,8 @@ import {
 type WorkWorkspaceProps = {
   initialBoard: WorkBoard;
 };
+
+type MobileWorkPane = "schedule" | "process" | "todos";
 
 function statusBadgeVariant(
   status: "done" | "doing" | "todo",
@@ -126,6 +129,7 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
     initialBoard.initiatives[0]?.sessions[0]?.id ?? "",
   );
   const [showOverdueFlash, setShowOverdueFlash] = useState(false);
+  const [mobilePane, setMobilePane] = useState<MobileWorkPane>("todos");
 
   const active = useMemo(
     () => initiatives.find((i) => i.id === selectedId) ?? initiatives[0],
@@ -301,7 +305,7 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
           </Breadcrumb>
           {statusText || hintText ? (
             <div
-              className="flex shrink-0 flex-col items-end gap-0.5 text-muted-foreground"
+              className="hidden shrink-0 flex-col items-end gap-0.5 text-muted-foreground sm:flex"
               aria-live="polite"
             >
               {statusText ? <span>{statusText}</span> : null}
@@ -310,9 +314,46 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
           ) : null}
         </header>
 
-        <div className="flex min-h-0 flex-1">
+        <nav
+          className="flex shrink-0 border-b border-border bg-background px-2 py-2 md:hidden"
+          aria-label="表示ペイン"
+        >
+          <ToggleGroup
+            value={[mobilePane]}
+            onValueChange={(values) => {
+              const next = values[0];
+              if (
+                next === "schedule" ||
+                next === "process" ||
+                next === "todos"
+              ) {
+                setMobilePane(next);
+              }
+            }}
+            variant="outline"
+            spacing={0}
+            className="grid w-full grid-cols-3"
+          >
+            <ToggleGroupItem value="schedule" className="min-w-0 px-1">
+              スケジュール
+            </ToggleGroupItem>
+            <ToggleGroupItem value="process" className="min-w-0 px-1">
+              工程
+            </ToggleGroupItem>
+            <ToggleGroupItem value="todos" className="min-w-0 px-1">
+              やること
+            </ToggleGroupItem>
+          </ToggleGroup>
+        </nav>
+
+        <div className="flex min-h-0 flex-1 flex-col md:flex-row">
           {/* Pane 2: 年間スケジュール（項目ごと） */}
-          <section className="flex w-[300px] shrink-0 flex-col border-r border-border bg-card">
+          <section
+            className={cn(
+              "flex min-h-0 flex-1 flex-col border-r border-border bg-card md:w-[300px] md:shrink-0",
+              mobilePane !== "schedule" && "hidden md:flex",
+            )}
+          >
             <div className="flex h-10 shrink-0 items-center border-b border-border px-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               年間スケジュール
             </div>
@@ -336,7 +377,10 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
                       )}
                       onClick={
                         linkedSessionId
-                          ? () => setSessionId(linkedSessionId)
+                          ? () => {
+                              setSessionId(linkedSessionId);
+                              setMobilePane("process");
+                            }
                           : undefined
                       }
                       title={
@@ -372,7 +416,12 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
           </section>
 
           {/* Pane 3: 今の区間の工程管理表 */}
-          <section className="flex min-w-0 flex-1 flex-col border-r border-border bg-muted/45">
+          <section
+            className={cn(
+              "flex min-h-0 min-w-0 flex-1 flex-col border-r border-border bg-muted/45",
+              mobilePane !== "process" && "hidden md:flex",
+            )}
+          >
             <div className="flex h-10 shrink-0 items-center border-b border-border bg-background px-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               工程管理
             </div>
@@ -432,7 +481,12 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
           </section>
 
           {/* Pane 4: その回のやること */}
-          <section className="relative flex w-[min(100%,360px)] shrink-0 flex-col bg-background sm:w-[360px]">
+          <section
+            className={cn(
+              "relative flex min-h-0 flex-1 flex-col bg-background md:w-[360px] md:shrink-0",
+              mobilePane !== "todos" && "hidden md:flex",
+            )}
+          >
             {showOverdueFlash ? (
               <div
                 className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/55"
