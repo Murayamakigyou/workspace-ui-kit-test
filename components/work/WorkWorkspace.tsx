@@ -25,6 +25,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
+  SidebarTrigger,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import {
   Breadcrumb,
@@ -117,6 +119,35 @@ function nextPeriodRowStatus(
   if (status === "todo") return "doing";
   if (status === "doing") return "done";
   return "todo";
+}
+
+function InitiativeMenuItem({
+  id,
+  name,
+  isActive,
+  onSelect,
+}: {
+  id: string;
+  name: string;
+  isActive: boolean;
+  onSelect: (id: string) => void;
+}) {
+  const { isMobile, setOpenMobile } = useSidebar();
+
+  return (
+    <SidebarMenuItem>
+      <SidebarMenuButton
+        isActive={isActive}
+        onClick={() => {
+          onSelect(id);
+          if (isMobile) setOpenMobile(false);
+        }}
+        className="w-full"
+      >
+        <span className="truncate">{name}</span>
+      </SidebarMenuButton>
+    </SidebarMenuItem>
+  );
 }
 
 export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
@@ -259,15 +290,13 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
           </div>
           <SidebarMenu>
             {initiatives.map((init) => (
-              <SidebarMenuItem key={init.id}>
-                <SidebarMenuButton
-                  isActive={init.id === active.id}
-                  onClick={() => selectInitiative(init.id)}
-                  className="w-full"
-                >
-                  <span className="truncate">{init.name}</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
+              <InitiativeMenuItem
+                key={init.id}
+                id={init.id}
+                name={init.name}
+                isActive={init.id === active.id}
+                onSelect={selectInitiative}
+              />
             ))}
           </SidebarMenu>
         </SidebarContent>
@@ -275,6 +304,10 @@ export function WorkWorkspace({ initialBoard }: WorkWorkspaceProps) {
 
       <SidebarInset className="flex min-w-0 flex-col bg-background">
         <header className="flex h-12 shrink-0 items-center gap-2 border-b border-border bg-background px-3">
+          <SidebarTrigger
+            className="shrink-0 md:hidden"
+            title="取組項目を開く"
+          />
           <Breadcrumb
             className="min-w-0 flex-1 overflow-hidden"
             aria-label="いまの場所"
