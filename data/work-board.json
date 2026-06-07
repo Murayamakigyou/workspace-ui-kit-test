@@ -1,0 +1,618 @@
+{
+  "workspaceName": "収益改善チームワークスペース",
+  "initiatives": [
+    {
+      "id": "i-5q-biweekly",
+      "name": "5問ドリル‗隔週",
+      "annualEvents": [
+        {
+          "month": 6,
+          "label": "第2回 配信6/3（水）・締切6/10・リマインド6/8",
+          "sessionId": "5q-s2"
+        },
+        {
+          "month": 6,
+          "label": "第3回 配信6/17（水）・締切6/24・リマインド6/22",
+          "sessionId": "5q-s3"
+        },
+        {
+          "month": 7,
+          "label": "第4回7/1・第5回7/15・第6回7/29（いずれも水）",
+          "sessionId": "5q-s4",
+          "status": "planned"
+        },
+        { "month": 8, "label": "第7回8/12・第8回8/26（水）", "status": "planned" },
+        { "month": 9, "label": "第9回9/9・第10回9/23（水）", "status": "planned" },
+        { "month": 10, "label": "第11回10/7・第12回10/21（水）", "status": "planned" },
+        { "month": 11, "label": "第13回11/4・第14回11/18（水）", "status": "planned" },
+        { "month": 12, "label": "第15回12/2・第16回12/16・第17回12/30（水）", "status": "planned" },
+        { "month": 1, "label": "第18回1/13・第19回1/27（水・1月末まで）", "status": "planned" }
+      ],
+      "currentPeriodLabel": "2026年 6月第3回（隔週水曜・6/17配信・土日祝除く営業日）",
+      "periodRows": [
+        {
+          "id": "5q-p2-1",
+          "step": "配信完了の記録",
+          "due": "6/3",
+          "owner": "自分",
+          "status": "done",
+          "sessionId": "5q-s2"
+        },
+        {
+          "id": "5q-p2-2",
+          "step": "リマインドメール（締切2営業日前）",
+          "due": "6/8",
+          "owner": "自分",
+          "status": "done",
+          "sessionId": "5q-s2"
+        },
+        {
+          "id": "5q-p2-3",
+          "step": "回答ダウンロード（締切翌営業日）",
+          "due": "6/11",
+          "owner": "自分",
+          "status": "done",
+          "sessionId": "5q-s2"
+        },
+        {
+          "id": "5q-p2-4",
+          "step": "正答率・未回答者数をメモ",
+          "due": "6/12",
+          "owner": "自分",
+          "status": "todo",
+          "sessionId": "5q-s2"
+        },
+        {
+          "id": "5q-p1",
+          "step": "5問作成",
+          "due": "6/10",
+          "owner": "自分",
+          "status": "doing",
+          "sessionId": "5q-s3"
+        },
+        {
+          "id": "5q-p2",
+          "step": "レビュー",
+          "due": "6/12",
+          "owner": "自分",
+          "status": "todo",
+          "sessionId": "5q-s3"
+        },
+        {
+          "id": "5q-p3",
+          "step": "配信メール文面作成",
+          "due": "6/16",
+          "owner": "自分",
+          "status": "todo",
+          "sessionId": "5q-s3"
+        },
+        {
+          "id": "5q-p4",
+          "step": "配信",
+          "due": "6/17",
+          "owner": "自分",
+          "status": "todo",
+          "sessionId": "5q-s3"
+        },
+        {
+          "id": "5q-p5",
+          "step": "締切2営業日前リマインド（第3回・締切6/24）",
+          "due": "6/22",
+          "owner": "自分",
+          "status": "todo",
+          "sessionId": "5q-s3"
+        },
+        {
+          "id": "5q-p6",
+          "step": "締切翌営業日に回答ダウンロード（第3回・締切6/24）",
+          "due": "6/25",
+          "owner": "自分",
+          "status": "todo",
+          "sessionId": "5q-s3"
+        }
+      ],
+      "sessions": [
+        {
+          "id": "5q-s2",
+          "title": "第2回 配信後フォロー",
+          "date": "2026-06-03",
+          "periodLabel": "第2回 配信後フォロー（6/3配信）",
+          "todos": [
+            { "id": "5q-t1", "text": "配信完了の記録（6/3・対象者数）", "done": true },
+            {
+              "id": "5q-t2",
+              "text": "リマインドメール送信（6/8・締切6/10の2営業日前）",
+              "done": true
+            },
+            {
+              "id": "5q-t3",
+              "text": "回答ダウンロード（6/11・締切6/10の翌営業日）",
+              "done": true
+            },
+            {
+              "id": "5q-t4",
+              "text": "正答率・未回答者数をメモ（次回の難易度調整用）",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": "5q-s3",
+          "title": "第3回 配信準備",
+          "date": "2026-06-17",
+          "periodLabel": "2026年 6月第3回（隔週水曜・6/17配信）",
+          "todos": [
+            { "id": "5q-t5", "text": "5問作成（ドラフト）", "done": false },
+            { "id": "5q-t6", "text": "レビュー依頼・フィードバック反映", "done": false },
+            { "id": "5q-t7", "text": "配信メール文面作成", "done": false },
+            { "id": "5q-t8", "text": "誤字・選択肢の整合を最終確認して配信（6/17）", "done": false },
+            { "id": "5q-t9", "text": "正答・解説の根拠リンクを添付", "done": false },
+            {
+              "id": "5q-t10",
+              "text": "リマインドメール送信（6/22・締切6/24の2営業日前）",
+              "done": false
+            },
+            {
+              "id": "5q-t11",
+              "text": "回答ダウンロード（6/25・締切6/24の翌営業日）",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": "5q-s4",
+          "title": "第4回 配信準備",
+          "date": "2026-07-01",
+          "periodLabel": "第4回 配信準備（7/1水）",
+          "todos": [
+            { "id": "5q-t12", "text": "前回の正答率を踏まえて難易度を調整", "done": false },
+            { "id": "5q-t13", "text": "5問作成〜レビュー〜配信（7/1水）", "done": false },
+            {
+              "id": "5q-t14",
+              "text": "リマインド（7/6・締切7/8の2営業日前）・DL（7/9・翌営業日）",
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i-study-cross",
+      "name": "社内勉強会（他部署連携）四半期",
+      "annualEvents": [
+        {
+          "month": 5,
+          "label": "他部署コーディネーターと年間枠の合意",
+          "sessionId": "st-s0"
+        },
+        {
+          "month": 6,
+          "label": "他部署打ち合わせ・準備（メイン担当が取りまとめ）",
+          "sessionId": "st-s1"
+        },
+        {
+          "month": 7,
+          "label": "WEB開催（1〜1.5h・社員＋代理店・録画あり）",
+          "sessionId": "st-s2"
+        },
+        {
+          "month": 7,
+          "label": "受講後FAQ（教えて！SOMPO・スプシ正本）",
+          "sessionId": "st-s3"
+        },
+        {
+          "month": 8,
+          "label": "FAQ v2・v3 更新（確認中の追記含む）",
+          "sessionId": "st-s3"
+        },
+        { "month": 11, "label": "Q4 回＋四半期アンケート", "status": "planned" }
+      ],
+      "currentPeriodLabel": "2026年 Q2 準備（7月WEB・録画・FAQ運用確定済）",
+      "periodRows": [
+        {
+          "id": "st-p0-1",
+          "step": "他部署コーディネーターと年間枠の合意",
+          "due": "5月",
+          "owner": "メイン担当",
+          "status": "done",
+          "sessionId": "st-s0"
+        },
+        {
+          "id": "st-p0-2",
+          "step": "四半期スケジュールの擦り合わせ",
+          "due": "5月",
+          "owner": "メイン担当",
+          "status": "done",
+          "sessionId": "st-s0"
+        },
+        {
+          "id": "st-p1",
+          "step": "月曜：他部署打ち合わせ（回数・日程・役割）",
+          "due": "月曜",
+          "owner": "メイン担当",
+          "status": "doing",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p2",
+          "step": "WEB日時・ツール確定",
+          "due": "6/19",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p3",
+          "step": "内容確定（企業火災・対象物評価と保険金支払）",
+          "due": "6/26",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p4",
+          "step": "役割分担（他部署・演者・商品部確認窓口）",
+          "due": "7/6",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p5",
+          "step": "時間配分（1〜1.5時間）",
+          "due": "7/8",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p6",
+          "step": "録画・後日視聴・社内ルール確認",
+          "due": "7/10",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p7",
+          "step": "FAQマスター（全社ドライブスプシ）準備",
+          "due": "7/15",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p8",
+          "step": "教えて！SOMPO 掲載・Excel版管理の準備",
+          "due": "7/17",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s1"
+        },
+        {
+          "id": "st-p9",
+          "step": "入室確認・録画開始",
+          "due": "当日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s2"
+        },
+        {
+          "id": "st-p10",
+          "step": "ライブ司会・進行（1〜1.5h）",
+          "due": "当日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s2"
+        },
+        {
+          "id": "st-p11",
+          "step": "質疑メモ（FAQ初版用）",
+          "due": "当日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s2"
+        },
+        {
+          "id": "st-p12",
+          "step": "GoogleフォームURL案内",
+          "due": "当日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s2"
+        },
+        {
+          "id": "st-p13",
+          "step": "録画の後日視聴案内送付",
+          "due": "翌営業日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s2"
+        },
+        {
+          "id": "st-p14",
+          "step": "フォーム受付（研修当日から5営業日）",
+          "due": "受付中",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s3"
+        },
+        {
+          "id": "st-p15",
+          "step": "FAQ初版公開（受付終了の5営業日後）",
+          "due": "公開日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s3"
+        },
+        {
+          "id": "st-p16",
+          "step": "スプシ正本・教えて！SOMPO v1 掲載",
+          "due": "公開日",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s3"
+        },
+        {
+          "id": "st-p17",
+          "step": "FAQ v2・v3 更新（確認中の追記含む）",
+          "due": "8月",
+          "owner": "メイン担当",
+          "status": "todo",
+          "sessionId": "st-s3"
+        }
+      ],
+      "sessions": [
+        {
+          "id": "st-s0",
+          "title": "5月 年間枠合意",
+          "date": "2026-05-15",
+          "periodLabel": "2026年 5月スタート（年間枠の合意）",
+          "todos": [
+            {
+              "id": "st-t0a",
+              "text": "他部署コーディネーターと年間枠の合意",
+              "done": true
+            },
+            {
+              "id": "st-t0b",
+              "text": "四半期開催の大まかな時期を擦り合わせ",
+              "done": true
+            }
+          ]
+        },
+        {
+          "id": "st-s1",
+          "title": "事前準備（他部署連携）",
+          "date": "2026-06-30",
+          "periodLabel": "2026年 Q2 事前準備（7月WEB・録画・FAQ運用）",
+          "todos": [
+            {
+              "id": "st-t1",
+              "text": "月曜打ち合わせ：ライブ回数・開催日・演者を決める",
+              "done": false
+            },
+            {
+              "id": "st-t2",
+              "text": "準備の取りまとめ窓口はメイン担当（自分）で進める",
+              "done": true
+            },
+            {
+              "id": "st-t3",
+              "text": "WEBのみ・録画あり・対象は社員＋代理店で合意",
+              "done": false
+            },
+            {
+              "id": "st-t4",
+              "text": "研修ゴール：正しい評価の再認識（説明できる＋録画で復習）",
+              "done": false
+            },
+            { "id": "st-t5", "text": "WEBツール・URL・入室手順を確定", "done": false },
+            { "id": "st-t6", "text": "資料たたき台・時間配分（1〜1.5h）", "done": false },
+            { "id": "st-t7", "text": "他部署・本社商品部の確認ルートを整理", "done": false },
+            {
+              "id": "st-t8",
+              "text": "録画テスト・保管場所・後日視聴の案内方法",
+              "done": false
+            },
+            {
+              "id": "st-t9",
+              "text": "案内文にフォーム受付・FAQ公開スケジュールを明記",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": "st-s2",
+          "title": "当日（7月WEBライブ）",
+          "date": "2026-07-15",
+          "periodLabel": "当日（7月WEBライブ・録画あり）",
+          "todos": [
+            { "id": "st-t10", "text": "ライブ開催・録画開始", "done": false },
+            { "id": "st-t11", "text": "当日の質疑で出たQをメモ（FAQ初版用）", "done": false },
+            {
+              "id": "st-t12",
+              "text": "終了時にGoogleフォームURLを案内（受付開始）",
+              "done": false
+            },
+            { "id": "st-t13", "text": "録画の後日視聴案内を送付", "done": false }
+          ]
+        },
+        {
+          "id": "st-s3",
+          "title": "受講後（FAQ・フォーム運用）",
+          "date": "2026-07-22",
+          "periodLabel": "受講後（FAQ・フォーム・教えて！SOMPO）",
+          "todos": [
+            {
+              "id": "st-t14",
+              "text": "フォーム受付：研修当日から5営業日",
+              "done": false
+            },
+            {
+              "id": "st-t15",
+              "text": "FAQ初版：受付終了の5営業日後に公開",
+              "done": false
+            },
+            {
+              "id": "st-t16",
+              "text": "社員向け：全社ドライブのスプシを正本に更新",
+              "done": false
+            },
+            {
+              "id": "st-t17",
+              "text": "代理店向け：教えて！SOMPO にFAQ（Excel）添付 v1",
+              "done": false
+            },
+            {
+              "id": "st-t18",
+              "text": "商品部・他部署確認が要る質問はFAQに「確認中」で掲載",
+              "done": false
+            },
+            {
+              "id": "st-t19",
+              "text": "判明次第FAQに追記（v2・v3 更新予定・計3回）",
+              "done": false
+            },
+            {
+              "id": "st-t20",
+              "text": "スプシからExcel書き出し（代理店版の内容ズレ防止）",
+              "done": false
+            },
+            {
+              "id": "st-t21",
+              "text": "ファイル名に日付・版番号（例：_20260715_v1）",
+              "done": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i-kyoyu-monthly",
+      "name": "思考プロセス共有会‗月例",
+      "annualEvents": [
+        { "month": 4, "label": "年間テーマ「思考の型」の宣言", "status": "done" },
+        { "month": 5, "label": "5月例会", "status": "done" },
+        {
+          "month": 6,
+          "label": "6月後半例会（30分・開催2名）",
+          "sessionId": "ky-s1"
+        },
+        { "month": 9, "label": "中間アンケート・改善", "status": "planned" },
+        { "month": 12, "label": "年次総会・次年度テーマ案", "status": "planned" }
+      ],
+      "currentPeriodLabel": "2026年 6月後半例会準備（30分・開催2名・営業日）",
+      "periodRows": [
+        {
+          "id": "ky-p1",
+          "step": "開催日時の確定（6月後半・30分）",
+          "due": "6/12",
+          "owner": "開催2名",
+          "status": "doing",
+          "sessionId": "ky-s1"
+        },
+        {
+          "id": "ky-p2",
+          "step": "テーマ・問いのたたき台",
+          "due": "6/16",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s1"
+        },
+        {
+          "id": "ky-p3",
+          "step": "役割分担（司会・進行・記録）",
+          "due": "6/18",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s1"
+        },
+        {
+          "id": "ky-p4",
+          "step": "時間配分（30分枠）",
+          "due": "6/19",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s1"
+        },
+        {
+          "id": "ky-p5",
+          "step": "案内送付",
+          "due": "6/22",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s1"
+        },
+        {
+          "id": "ky-p6",
+          "step": "当日ファシリメモ",
+          "due": "6/24",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s1"
+        },
+        {
+          "id": "ky-p7",
+          "step": "振り返り1枚を共有",
+          "due": "7月上旬",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s2"
+        },
+        {
+          "id": "ky-p8",
+          "step": "次回開催の要否・形式を検討",
+          "due": "7月中旬",
+          "owner": "開催2名",
+          "status": "todo",
+          "sessionId": "ky-s2"
+        }
+      ],
+      "sessions": [
+        {
+          "id": "ky-s1",
+          "title": "6月後半 例会（30分）",
+          "date": "2026-06-26",
+          "periodLabel": "2026年 6月後半例会準備（30分・開催2名）",
+          "todos": [
+            {
+              "id": "ky-t1",
+              "text": "開催日時を6月後半で確定（30分枠）",
+              "done": false
+            },
+            {
+              "id": "ky-t2",
+              "text": "開催2名の役割分担（司会・進行・記録）",
+              "done": false
+            },
+            {
+              "id": "ky-t3",
+              "text": "時間配分（導入5分・本編20分・質疑5分 など）",
+              "done": false
+            },
+            { "id": "ky-t4", "text": "テーマ・問いのたたき台を共有", "done": false },
+            { "id": "ky-t5", "text": "会場／オンラインURLを確定", "done": false },
+            { "id": "ky-t6", "text": "参加者へ案内送付", "done": false },
+            { "id": "ky-t7", "text": "開催前日リマインド送付", "done": false },
+            {
+              "id": "ky-t8",
+              "text": "振り返りメモ（良かった点・次回改善）",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": "ky-s2",
+          "title": "7月以降（検討）",
+          "date": "2026-07-24",
+          "periodLabel": "7月以降の振り返り・次回検討",
+          "todos": [
+            { "id": "ky-t9", "text": "6月後半例会の振り返り1枚を共有", "done": false },
+            { "id": "ky-t10", "text": "次回開催の要否・形式を検討", "done": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -12,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "採用管理ワークスペース",
-  description: "tweakcn テーマ + 日本語タイポ検証用プロトタイプ",
+  title: "収益改善チームワークスペース",
+  description: "収益改善チームの取組・工程・ToDo を一覧するワークスペース",
 };
 
 export const viewport: Viewport = {

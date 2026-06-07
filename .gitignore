@@ -32,6 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# 取組ダッシュボードのローカル保存（開発用）
+data/work-board.live.json
 
 # vercel
 .vercel
